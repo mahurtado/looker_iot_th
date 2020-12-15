@@ -26,9 +26,24 @@ view: th_values {
       week,
       month,
       quarter,
-      year
+      year,
+      hour_of_day,
+      day_of_week,
+      minute5,
+      hour
     ]
     sql: ${TABLE}.timestamp ;;
+    drill_fields: [timestamp_date, timestamp_hour, timestamp_minute5, timestamp_time]
+  }
+
+  measure: avg_temperature {
+    type: average
+    sql: ${temperature};;
+  }
+
+  measure: avg_humidity {
+    type: average
+    sql: ${humidity};;
   }
 
   measure: count {
