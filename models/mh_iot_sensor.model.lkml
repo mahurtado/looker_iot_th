@@ -10,6 +10,4 @@ datagroup: mh_iot_sensor_default_datagroup {
 
 persist_with: mh_iot_sensor_default_datagroup
 
-explore: sensor_data {}
-
 explore: th_values {}
